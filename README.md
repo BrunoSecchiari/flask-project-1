@@ -1,6 +1,6 @@
 # Flask REST API
 
-A RESTful API built with Flask, featuring full CRUD operations for **Stores**, **Items**, and **Tags**. The project uses Flask-Smorest for API management and auto-generated Swagger UI documentation, Flask-SQLAlchemy for ORM-based database interaction, and Docker for containerized deployment.
+A REST API built with Flask, featuring full CRUD operations for **Stores**, **Items**, and **Tags**. The project uses Flask-Smorest for API management and auto-generated Swagger UI documentation, Flask-SQLAlchemy for ORM-based database interaction, and Docker for containerized deployment.
 
 ---
 
@@ -16,15 +16,15 @@ A RESTful API built with Flask, featuring full CRUD operations for **Stores**, *
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | Flask |
-| API Layer | Flask-Smorest |
-| ORM | Flask-SQLAlchemy / SQLAlchemy |
-| Serialization | Marshmallow (via Flask-Smorest schemas) |
-| Database | SQLite (default) |
-| Containerization | Docker / Docker Compose |
-| Config | python-dotenv |
+| Layer            | Technology                              |
+| ---------------- | --------------------------------------- |
+| Framework        | Flask                                   |
+| API Layer        | Flask-Smorest                           |
+| ORM              | Flask-SQLAlchemy / SQLAlchemy           |
+| Serialization    | Marshmallow (via Flask-Smorest schemas) |
+| Database         | SQLite (default)                        |
+| Containerization | Docker / Docker Compose                 |
+| Config           | python-dotenv                           |
 
 ---
 
@@ -54,12 +54,14 @@ flask-project-1/
 ### Option 1 — Run Locally
 
 **1. Clone the repository**
+
 ```bash
 git clone https://github.com/BrunoSecchiari/flask-project-1.git
 cd flask-project-1
 ```
 
 **2. Create and activate a virtual environment**
+
 ```bash
 python -m venv .venv
 
@@ -71,11 +73,13 @@ source .venv/bin/activate
 ```
 
 **3. Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 **4. Run the app**
+
 ```bash
 flask run
 ```
@@ -87,6 +91,7 @@ The API will be available at `http://localhost:5000`.
 ### Option 2 — Run with Docker
 
 **1. Build and start the container**
+
 ```bash
 docker-compose up --build
 ```
@@ -111,10 +116,10 @@ This provides a full interactive Swagger UI where you can explore and test all e
 
 The app reads configuration from `.flaskenv`. You can customize the following:
 
-| Variable | Description | Default |
-|---|---|---|
-| `FLASK_APP` | Entry point for Flask | `app.py` |
-| `FLASK_DEBUG` | Enable debug mode | `1` |
+| Variable       | Description                | Default             |
+| -------------- | -------------------------- | ------------------- |
+| `FLASK_APP`    | Entry point for Flask      | `app.py`            |
+| `FLASK_DEBUG`  | Enable debug mode          | `1`                 |
 | `DATABASE_URL` | Database connection string | `sqlite:///data.db` |
 
 ---
@@ -130,6 +135,7 @@ sqlalchemy
 ```
 
 Install all dependencies with:
+
 ```bash
 pip install -r requirements.txt
 ```
